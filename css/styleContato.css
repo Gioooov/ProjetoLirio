@@ -1,0 +1,149 @@
+:root {
+    --azul-fundo: #0c3559;
+    --vinho: #7a162a;
+    --bege: #faf1ca;
+    --roxo-contato: #a37ba3; 
+}
+
+body {
+    margin: 0;
+    background-color: var(--azul-fundo);
+    font-family: 'Times New Roman', serif;
+    overflow: hidden;
+}
+
+
+.nav-superior {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+.nav-bg {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(5px);
+    padding: 8px 40px;
+    border-radius: 20px;
+}
+.nav-bg a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+}
+
+
+.contato-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.faixa-fundo-vinho {
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    background-color: var(--vinho);
+    z-index: 1;
+}
+
+
+.contato-card {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    width: 900px;
+    height: 550px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+}
+
+
+.contato-visual {
+    flex: 1;
+    background-color: var(--roxo-contato);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.flor-contato {
+    width: 80%;
+    z-index: 1;
+}
+
+@font-face {
+    font-family: 'minhafonte'; 
+    src: url('../fontes/slight-regular.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+.logo-contato {
+    font-family: 'minhafonte', cursive;
+    color: #faf1ca;
+    top: 250px;
+    font-size: 5rem;
+    position: absolute;
+    bottom: 40px;
+    z-index: 2;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+}
+
+
+.contato-form-area {
+    flex: 1;
+    background-color: var(--bege);
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contato-form-area h2 {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #000;
+}
+
+.input-grupo {
+    margin-bottom: 25px;
+}
+
+.input-grupo label {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.input-grupo input, 
+.input-grupo textarea {
+    width: 100%;
+    border: none;
+    background: transparent;
+    font-family: serif;
+    font-size: 1rem;
+    outline: none;
+}
+
+.btn-enviar {
+    background: none;
+    border: none;
+    font-family: serif;
+    font-size: 1.5rem;
+    margin-top: auto;
+    align-self: flex-end;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-enviar:hover {
+    transform: scale(1.1);
+    color: var(--vinho);
+}

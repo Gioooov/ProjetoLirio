@@ -1,0 +1,30 @@
+{
+  "name": "listatypescript",
+  "version": "1.0.0",
+  "description": "Minhas atividades do TypeScript",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc && node ./dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gioooov/ListaTypeScript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Gioooov/ListaTypeScript/issues"
+  },
+  "homepage": "https://github.com/Gioooov/ListaTypeScript#readme",
+  "devDependencies": {
+    "typescript": "^6.0.2"
+  },
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+  
+}
+

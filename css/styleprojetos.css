@@ -1,0 +1,245 @@
+:root {
+    --azul-fundo: #0f3c64;
+    --vinho: #7a162a;
+    --vinho-claro: #a52a41;
+    --azul-card: #2c5d87;
+    --bege: #ffffff;
+}
+
+body {
+    margin: 0;
+    background-color: var(--azul-fundo);
+    font-family: 'Times New Roman', serif;
+    color: var(--bege);
+    overflow-y: hidden; 
+    overflow-x: auto;   
+}
+
+
+.nav-superior {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+.nav-bg {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(5px);
+    padding: 5px 30px;
+    border-radius: 20px;
+}
+.nav-bg a {
+    color: white;
+    text-decoration: none;
+    margin: 0 50px;
+}
+@font-face {
+    font-family: 'minhafonte'; 
+    src: url('../fontes/slight-regular.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+.nome-lirio {
+    position: absolute;
+
+    transform: translate(-50%, -50%); 
+    font-family: 'minhafonte', cursive;
+    font-size: 4rem;
+    z-index: 10;
+    pointer-events: none; 
+    text-shadow: 5px 5px 9px rgba(2, 4, 0, 2);
+    
+}
+
+.header-projetos {
+    position: fixed;
+    left: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 250px;
+    z-index: 10;
+}
+.logo-projetos {
+    font-size: 3rem;
+    color: var(--bege);
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+
+
+
+
+.sec-vinho { background-color: var(--vinho); }
+.sec-azul-claro { background-color: var(--azul-card); }
+.sec-vinho-claro { background-color: var(--vinho-claro); }
+
+.projeto-categoria {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    letter-spacing: 5px;
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
+.projeto-titulo {
+    font-size: 1rem; 
+    text-align: center;
+}
+
+.img-wrapper {
+    width: 80%;
+    height: 100px; 
+    margin: 10px 0;
+}
+
+.img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.secao-tabela {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 60px 0;
+    background-color: var(--azul-fundo); 
+}
+
+.tabela-projeto {
+    width: 90%;
+    max-width: 1000px;
+    border-collapse: collapse;
+    color: var(--bege);
+    font-family: 'Times New Roman', serif;
+}
+
+
+.tabela-projeto th {
+    padding: 15px 20px;
+    border-bottom: 2px solid rgba(250, 241, 202, 0.3); 
+    text-align: left;
+}
+
+
+.tabela-projeto td {
+    padding: 12px 15px; 
+    border-bottom: 1px solid rgba(250, 241, 202, 0.15);
+    vertical-align: top;
+    font-size: 0.9rem; 
+}
+
+
+.tabela-projeto .principal {
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+}
+
+
+.tabela-projeto .links {
+    font-size: 1rem;
+    color: rgba(250, 241, 202, 0.85); 
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+}
+
+
+.tabela-projeto tr:last-child td {
+    border-bottom: none;
+}
+
+
+.tabela-projeto tr:hover td {
+    background-color: rgba(255, 255, 255, 0.02);
+    transition: background 0.4s ease;
+}
+.grid-projetos {
+    display: grid;
+    grid-template-columns: 25% 45% 30%;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--azul-fundo);
+    overflow: hidden; 
+    padding-top: 60px; 
+    box-sizing: border-box; 
+}
+
+
+.coluna-esquerda {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.nome-lirio-estatico {
+    font-family: 'minhafonte', cursive;
+    font-size: 4.5rem; 
+    color: #fff;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+
+.frase-motivacional {
+    font-size: 1.2rem; 
+    color: #faf1ca;
+    padding: 0 20px;
+}
+
+
+.coluna-central {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 30px;
+    gap: 15px; 
+    overflow-y: auto; 
+}
+
+.textos-introducao p {
+    color: #fff;
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+
+.coluna-direita {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+}
+
+.banner-projeto {
+    flex: 1;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    transition: 0.4s;
+    overflow: hidden; 
+}
+
+.banner-projeto.vinho { background-color: #660827; }
+.banner-projeto.azul { background-color: #4b79bb; }
+.banner-projeto.verde { background-color: #76a0a0; }
+
+.banner-projeto:hover {
+    flex: 1.5; 
+    filter: brightness(1.2);
+}
+.card h3 {
+    color: #5da9dd;
+    font-family: 'minhafonteII', serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
